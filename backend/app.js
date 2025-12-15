@@ -22,6 +22,7 @@ import forgotpassRoutes from "./routes/forgotpasswordroutes.js";
 import feedbackRouter from "./router/feedbackRouter.js"; // Feedback feature
 import teams from "./routes/teamRoutes.js";
 import authRoutes from "./routes/authroutes.js"; // OTP-based password reset
+import adminRoutes from "./routes/adminRoutes.js";
 
 // ✅ Import the new Marks routes
 import Router from "./routes/marksRoutes.js"; // <-- Make sure you have this file
@@ -60,6 +61,7 @@ app.use("/api/v1/send-email", sendEmailRoutes);
 app.use("/api/vi/forgotpass", forgotpassRoutes);
 app.use("/api/v1/feedback", feedbackRouter);
 app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/users", adminRoutes);
 
 // ✅ Add Marks Route to API
 app.use("/api/v1/marks", Router); // <--- Added this line for marks feature
